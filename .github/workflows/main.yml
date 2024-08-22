@@ -1,1 +1,20 @@
-
+name: This is a simple buils
+on:
+   release:
+      types: "published"
+jobs:
+    name: this will cretae a qa check
+    runs-on: ubuntu:22.04
+    steps:
+      - name: "This will checkout the code from git"
+        actions: actions/checkout@v4
+      - name: "This will install java and mvn" 
+        run:  |
+        "apt-get install java"
+         "apt-get install mvn"
+      - name: "this will build a maven project"
+        run: |
+          "mv build clean"
+            
+        
+    
